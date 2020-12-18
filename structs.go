@@ -69,7 +69,7 @@ func (d *DAG) addNode(n *Node) error {
 		//validate parents
 		if _, present := d.nodes[parent]; present {
 			// append node as ancestor to parent nodes
-			d.nodes[parent].ancestors[parent] = n
+			d.nodes[parent].ancestors[n.getName()] = n
 		} else {
 			// prevent cyclic references and non-existent node references
 			return fmt.Errorf("Invalid Map, node %s contains parent (%s) not in map yet", n.getName(), parent)

@@ -8,7 +8,7 @@ func main() {
 	if err != nil {
 		fmt.Print(err)
 	}
-	fmt.Println(dag1.GetAncestors("C"))
+	fmt.Println(dag1.GetAncestors("B"))
 	fmt.Println(dag1.GetLeaves())
 	fmt.Println(dag1.GetBisectors())
 }
