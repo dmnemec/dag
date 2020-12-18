@@ -43,7 +43,7 @@ func newNode(s string) *Node {
 	node := &Node{}
 	splits := strings.Split(s, ":")
 	node.name = strings.TrimSpace(splits[0])
-	if len(splits) > 1 {
+	if len(splits) > 1 && splits[1] != "" {
 		parents := strings.Split(splits[1], ",")
 		for _, parent := range parents {
 			node.parents = append(node.parents, strings.TrimSpace(parent))
